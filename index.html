@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Footy University Documentation</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <div id="container">
+            <div>
+                <nav id="navbar">
+                    <header><h1>Footy University Documentation</h1></header>
+
+                    <a href="#Introduction" class="nav-link">Introduction</a>
+                    <a href="#Prerequisites" class="nav-link">Prerequisites</a>
+                    <a href="#Menu" class="nav-link">Menu</a>
+                    <a href="#Home" class="nav-link">Home</a>
+                    <a href="#Features" class="nav-link">Features</a>
+                    <a href="#How_It_Works" class="nav-link">How It Works</a>
+                    <a href="#Pricing" class="nav-link">Pricing</a>
+                    <a href="#Get_It" class="nav-link">Get It</a>
+                    <a href="#Footer" class="nav-link">Footer</a>
+                </nav>
+            </div>
+
+            <main id="main-doc">
+                <section class="main-section" id="Introduction">
+                    <header><h2>Introduction</h2></header>
+                    <p>
+                        The <a href="https://codepen.io/jasclarke/pen/xxwpeQe">Footy University</a> webpage is a responsive product landing page template. It contains the following five sections:
+                        <ol>
+                            <li><a href="#Home">Home</a> - Attention Grabber Section.</li>
+                            <li><a href="#Features">Features</a> - Highlights main features of the product.</li>
+                            <li><a href="#How_It_Works">How It Works</a> - Section describing and depicting how the product functions.</li>
+                            <li><a href="#Pricing">Pricing</a> - Section displaying the different pricing options for the product.</li>
+                            <li><a href="#Get_It">Get It</a> - Section with a form to allow a visitor to make contact.</li>
+                        </ol>
+                        It was built using vanilla HTML and CSS by <a href="https://jclarke.dev">Jason Clarke</a> and is free to use for both commercial and personal use.
+                    </p>
+                </section>
+                
+                <section class="main-section" id="Prerequisites">
+                    <header><h2>Prerequisites</h2></header>
+
+                    <p>
+                        Modification of the <a href="https://codepen.io/jasclarke/pen/xxwpeQe">Footy University</a> template requires knowledge of the following technologies:
+                        <ul>
+                            <li><a href="https://en.wikipedia.org/wiki/HTML5">HTML5</a></li>
+                            <li><a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets">CSS3</a></li>
+                        </ul>
+                    </p>
+                </section>
+
+                <section class="main-section" id="Menu">
+                    <header><h2>Menu</h2></header>
+
+                    <p>
+                        The menu section contains links to each section of the landing page. Additionally, its position property is sticky making it easily accessible to the user regardless of which section of the page they are viewing. Subsequently, it has a designated area for a logo where you can replace the current one with yours by locating the piece of code below in the page and modifying the source attribute of the image tag.
+<pre>
+    <code>
+        &lt;div>&lt;a href="#home">&lt;img src="images/logo.png" alt="Footy University Logo" id="header-img"/>&lt;/a>&lt;/div>
+    </code>
+</pre>
+                    </p>
+                    <p>
+                        If you have more sections then you can simply add links to them by locating the code below in the page and adding the anchor tags as reqired. Additionally, you can modify the other anchor tags as desired just remember to modifying the section(s) id attribute
+<pre>
+    <code>
+        &lt;nav id="nav-bar">
+        &lt;a href="#features" class="nav-link">Features&lt;/a>
+        &lt;a href="#how-it-works" class="nav-link">How It Works&lt;/a>
+        &lt;a href="#pricing" class="nav-link">Pricing&lt;/a>
+        &lt;a href="#notify" class="nav-link">Get It&lt;/a>
+        &lt;/nav>
+    </code>
+</pre>
+                    </p>
+                </section>
+
+                <section class="main-section" id="Home">
+                    <header><h2>Home</h2></header>
+
+                    <p>
+                        The Home has two parts the left side is designated for text to entice the visitor and the right is an image of the product to complete the seduction. Additionally, the left side has two CTA's, one to acquire the product immediately and the other that leads to a video which should be about how the product will solve their problem. Furthermore, it has an svg image separating it from the next section, feel free to modify or delete this if desired. Its contents can be modifyied by changing locating the code snippets below in the source files.
+
+<pre>
+    <code>
+        <h3>HTML</h3>
+        &lt;section id="home">
+            &lt;div>
+                &lt;p class="intro">Lorem ipsum dolor sit amet, consectetur
+                 adipiscing elit. Suspendisse ornare est nec erat dapibus, vel
+                  cursus libero fermentum. In hac habitasse platea dictumst. 
+                  Proin eget vestibulum tellus. Nullam eget luctus neque, non 
+                  consequat odio. Duis eget blandit nisi.&lt;/p>
+                  &lt;div id="cta">
+                    &lt;a href="#notify" class="button" id="download">Download&lt;/a>
+                    &lt;a href="#video" class="button" id="video-button">Play Video&lt;/a>
+                    &lt;/div>
+            &lt;/div>
+
+            &lt;div id="phone-container">
+                &lt;img src="images/phone.png" alt="Image of the Footy University app in an iPhone" id="phone"/>
+            &lt;/div>
+        &lt;/section>
+            
+        &lt;div id="curve-container">&lt;img src="images/grey_half_oval.svg"/>&lt;/div>
+    </code>
+</pre>
+
+<pre>
+    <code>
+        <h3>CSS</h3>
+            .intro {
+                margin-top: 5%;
+            }
+            
+            .button {
+                display: inline-block;
+                border: 1px solid #FFDF00;
+                border-radius: 25px;
+                padding: 15px 45px 15px;
+                text-decoration: none;
+            }
+            
+            .feature-icon {
+                height: 100px;
+            }
+            
+            #home {
+                display: flex;
+                flex-direction: row;
+                min-height: 86vh;
+            }
+            
+            #home>div {
+                width: 50%;
+            }
+            
+            #tagline {
+                font-family: 'Anton';
+                font-size: 3rem;
+                color: #FFDF00;
+            }
+            
+            #cta {
+                margin-top: 10%;
+            }
+            
+            #download {
+                background-color: #FFDF00;
+                color: #464646;
+                margin-right: 20px;
+            }
+            
+            #video-button {
+                color: #FFDF00;
+            }
+            
+            #phone-container {
+                text-align: center;
+            }
+            
+            #phone {
+                width: 700px;
+            }
+            
+            #curve-container {
+                background-color: #FFDF00;
+            }
+            
+            #curve-container>img {
+                width: 100%;
+            }
+    </code>
+</pre>
+                    </p>
+                </section>
+
+                <section class="main-section" id="Features">
+                    <header><h2>Features</h2></header>
+
+                    <p>
+                        The features section is divided into three parts each containing an image symbolising the feature, text describing the feature and header stating the name of the feature. The layout was created using the flex property as was the custom for each section.
+
+<pre>
+    <code>
+        <h3>HTML</h3>
+        &lt;section id="features">
+            &lt;h2>Features loved by players and coaches&lt;/h2>
+
+            &lt;div id="feature-container">
+                &lt;div>
+                    &lt;img src="images/tactical_board.png" alt="tactical board icon" class="feature-icon"/>
+                    &lt;h3>Drill Creator&lt;/h3>
+                    &lt;p>Aliquam pretium, mi non dignissim commodo, eros leo
+                     lacinia dolor, quis auctor mi nulla quis magna. Sed finibus 
+                     venenatis bibendum. Nullam imperdiet imperdiet diam et 
+                     convallis.&lt;/p>
+                &lt;/div>
+
+                &lt;div>
+                    &lt;img src="images/football.png" alt="football icon" class="feature-icon"/>
+                    &lt;h3>Skills Tutorials&lt;/h3>
+                    &lt;p>Aliquam pretium, mi non dignissim commodo, eros leo 
+                    lacinia dolor, quis auctor mi nulla quis magna. Sed finibus 
+                    venenatis bibendum. Nullam imperdiet imperdiet diam et 
+                    convallis.&lt;/p>
+                &lt;/div>
+
+                &lt;div>
+                    &lt;img src="images/trophy.png" alt="trophy icon" class="feature-icon"/>
+                    &lt;h3>Unlockables&lt;/h3>
+                    &lt;p>Aliquam pretium, mi non dignissim commodo, eros leo 
+                    lacinia dolor, quis auctor mi nulla quis magna. Sed finibus 
+                    venenatis bibendum. Nullam imperdiet imperdiet diam et 
+                    convallis.&lt;/p>
+                &lt;/div>
+            &lt;/div>
+        &lt;/section>
+    </code>
+</pre>
+
+<pre>
+    <code>
+        <h3>CSS</h3>
+            #features {
+                background-color: #FFDF00;
+                color: #464646;
+                padding-top: 7%;
+                padding-bottom: 5%;
+            }
+            
+            #feature-container>div {
+                width: 28%;
+                text-align: center;
+            }
+    </code>
+</pre>
+                    </p>
+                </section>
+
+                <section class="main-section" id="How_It_Works">
+                    <header><h2>How It Works</h2></header>
+
+                    <p>
+                        The how it works section consists of two parts. The left side has a video highlighting the purpose of the product and the right side contains text giving a detailed description of the product. The video is embedded from YouTube and you feel free to do the same. You can also place a video of your own. Just ensure to give it an id of "video" to ensure it retains its styles for responsiveness. This section can be modified by locating the code below in the source files and making your necessary changes.
+
+<pre>
+    <code>
+        <h3>HTML</h3>
+        &lt;section id="how-it-works">
+            &lt;h2>How It Works?&lt;/h2>
+
+            &lt;div id="how-it-works-container">
+                &lt;div>
+                    &lt;iframe id="video" width="560" height="315" src="https://
+                    www.youtube.com/embed/2lbgUCLAhnQ?controls=0" 
+                    frameborder="0" allow="accelerometer; autoplay; 
+                    encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>&lt;/iframe>
+                &lt;/div>
+
+                &lt;div>
+                    &lt;h3>It's all in the details!&lt;/h3>
+                    &lt;p>Duis eu est eget nisi tempor mollis. Cras turpis est,
+                     facilisis at accumsan eu, sagittis in ligula. Fusce at 
+                     ultricies orci, nec ornare ex. Nulla facilisi. Vivamus 
+                     dignissim lorem sed libero bibendum, ac aliquet nisi 
+                     laoreet. Phasellus a purus porttitor, iaculis diam eget, 
+                     ullamcorper risus. Vivamus tincidunt, sem eu vestibulum 
+                     pulvinar, mauris velit consequat lectus, sit amet 
+                     consectetur lorem ex vel ligula. Integer at nisl quis arcu 
+                     tristique fermentum feugiat id risus.&lt;/p>
+                &lt;/div>
+            &lt;/div>
+        &lt;/section>
+    </code>
+</pre>
+
+    <pre>
+        <code>
+            <h3>CSS</h3>
+                #how-it-works>h2, #how-it-works h3, #notify>h2 {
+                    color: #FFDF00;
+                }
+                
+                #how-it-works-container>div {
+                    width: 40%;
+                }
+                
+                #video {
+                    max-width: 100%; 
+                    height: 315px;
+                }
+        </code>
+    </pre> 
+                    </p>
+                </section>
+
+                <section class="main-section" id="Pricing">
+                    <header><h2>Pricing</h2></header>
+
+                    <p>
+                        The pricing section is similar to the features section in terms of layout except it does not contain any images. This section can be altered by locating the code below in the source files.
+                        
+<pre>
+    <code>
+        <h3>HTML</h3>
+        &lt;section id="pricing">
+            &lt;h2>Affordable Pricing&lt;/h2>
+
+            &lt;div id="pricing-container">
+                &lt;div class="background-plan">
+                    &lt;h3>Player&lt;/h3>
+                    &lt;small>This plan is for players&lt;/small>
+                    &lt;p class="price">Free&lt;/p>
+                    &lt;table>
+                        &lt;tr>
+                            &lt;td>Lorem Ipsum&lt;/td>
+                        &lt;/tr>
+                        &lt;tr>
+                            &lt;td>Lorem Ipsum&lt;/td>
+                        &lt;/tr>
+                        &lt;tr>
+                            &lt;td>Lorem Ipsum</td>
+                        &lt;/tr>
+                    &lt;/table>
+                    &lt;a href="#notify" class="button">Select&lt;/a>
+                &lt;/div>
+
+                &lt;div id="highlight-plan">
+                    &lt;h3>Manager&lt;/h3>
+                    &lt;small>This plan is for coaches who want to give more to their players&lt;/small>
+                    &lt;p class="price">$9.99&lt;/p>
+                    &lt;table>
+                        &lt;tr>
+                            &lt;td>Lorem Ipsum&lt;/td>
+                        &lt;/tr>
+                        &lt;tr>
+                            &lt;td>Lorem Ipsum&lt;/td>
+                        &lt;/tr>
+                        &lt;tr>
+                            &lt;td>Lorem Ipsum&lt;/td>
+                        &lt;/tr>
+                    &lt;/table>
+                    &lt;a href="#notify" class="button">Select</a>
+                &lt;/div>
+
+                &lt;div class="background-plan">
+                    &lt;h3>Coach</h3>
+                    &lt;small>This plan is for coaches&lt;/small>
+                    &lt;p class="price">Free&lt;/p>
+                    &lt;table>
+                        &lt;tr>
+                            &lt;td>Lorem Ipsum&lt;/td>
+                        &lt;/tr>
+                        &lt;tr>
+                            &lt;td>Lorem Ipsum&lt;/td>
+                        &lt;/tr>
+                        &lt;tr>
+                            &lt;td>Lorem Ipsum&lt;/td>
+                        &lt;/tr>
+                    &lt;/table>
+                    &lt;a href="#notify" class="button">Select</a>
+                &lt;/div>
+            &lt;/div>
+        &lt;/section>
+    </code>
+</pre>
+
+<pre>
+    <code>
+        <h3>CSS</h3>
+            small {
+                font-size: 0.75rem;
+            }
+            
+            table {
+                margin: 0 auto;
+            }
+            
+            td {
+                border-bottom: 2px solid #464646;
+                padding-bottom: 5px;
+            }
+            
+            .price {
+                background-color: #464646;
+                color: #FFDF00;
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                margin: 10% auto;
+                line-height: 100px;
+            }
+            
+            .background-plan {
+                margin-top: 3%;
+                height: 465px;
+            }
+            
+            #pricing {
+                background-color: #FFDF00;
+                color: #464646;
+            }
+            
+            #pricing-container>div {
+                width: 28%;
+                border: 3px solid #464646;
+                text-align: center;
+            }
+            
+            #pricing-container h3 {
+                margin-bottom: 0;
+            }
+            
+            #pricing-container .button {
+                margin: 10% 0;
+                background-color: #464646;
+                color: #FFDF00;
+            }
+            
+            #highlight-plan {
+                height: 530px;
+                background-color: #464646;
+                color: #FFDF00;
+                box-shadow: 0px 0px 10px #464646;
+            }
+            
+            #highlight-plan>.price {
+                background-color: #FFDF00;
+                color: #464646;
+            }
+            
+            #highlight-plan td {
+                border-bottom: 2px solid #FFDF00;
+            }
+            
+            #highlight-plan>.button {
+                background-color: #FFDF00;
+                color: #464646;
+            }
+    </code>
+</pre>
+                    </p>
+                </section>
+
+                <section class="main-section" id="Get_It">
+                    <header><h2>Get It</h2></header>
+
+                    <p>
+                        This section simply contains a form so that the user can submit their email to either contact you or stay updated with the product. Feel free to modify this form as reqired. This section can be modified by locating the code in source files below.
+
+<pre>
+    <code>
+        <h3>HTML</h3>
+        &lt;section id="notify">&lt;br/>
+            &lt;h2>Get Notified&lt;/h2>
+            &lt;div>
+                &lt;form id="form" action="https://www.freecodecamp.com/email-submit" method="POST">
+                    &lt;div id="email-container">
+                        &lt;label id="email-label" for="email">Email&lt;/label>
+                        &lt;input id="email" type="email" name="email" placeholder="john@doe.com"/>
+                    &lt;/div>
+
+                    &lt;p>Are you a player or a coach?&lt;/p>
+
+                    &lt;div>
+                        &lt;label for="player">Player&lt;/label>
+                        &lt;input id="player" type="radio" name="user" value="1"/>
+                    &lt;/div>
+
+                    &lt;div>
+                        &lt;label for="coach">Coach&lt;/label>
+                        &lt;input id="coach" type="radio" name="user" value="0"/>
+                    &lt;/div>
+
+                    &lt;input type="submit" id="submit" class="button" value="Notify Me!"/>
+                &lt;/form>
+            &lt;/div>
+        &lt;/section>
+    </code>
+</pre>
+
+<pre>
+    <code>
+        <h3>CSS</h3>
+            form {
+                text-align: center;
+            }
+            
+            form>div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            form>.button {
+                background-color: #FFDF00;
+                color: #464646;
+                font-family: 'Yanone Kaffeesatz';
+                font-size: 1.5rem;
+                margin-top: 5%;
+            }
+            
+            #email-container {
+                flex-direction: column;
+            }
+            
+            #email-label {
+                align-self: start;
+                font-size: 1rem;
+            }
+            
+            #email {
+                background-color: transparent;
+                border: none;
+                border-radius: 0;
+                border-bottom: 1px solid #FFDF00;
+                margin-top: 15px;
+                margin-bottom: 20px;
+                height: 20px;
+                width: 100%;
+                text-align: center;
+                color: #FFDF00;
+                font-family: 'Yanone Kaffeesatz';
+                font-size: 1.25rem;
+            }
+            
+            #email:focus {
+                outline: none;
+                border-bottom: 1px solid #FFDF00;
+            }
+            
+            #notify>div {
+                width: 50%;
+                margin: 0 auto;
+            }
+            
+            #submit {
+                -webkit-appearance: none;
+            }
+    </code>
+</pre> 
+                    </p>
+                </section>
+
+                <section class="main-section" id="Footer">
+                    <header><h2>Footer</h2></header>
+
+                    <p>
+                        This section simply contains some text and a hyperlink to the author of the landing page. It would appreciated if credit to landing page remains with author. Feel free add anything else desired.
+                    </p>
+                </section>
+            </main>
+        </div>
+    </body>
+</html>

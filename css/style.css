@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Anton|Yanone+Kaffeesatz&display=swap');
+
+body {
+    margin: 0 5% 0 5%;
+    background-color: #464646;
+    color: #FFF;
+    font-family: 'Yanone Kaffeesatz';
+    font-size: 1.5rem;
+}
+
+h1, h2, h3 {
+    color: #FFDF00;
+    font-family: 'Anton';
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+}
+
+h3 {
+    margin-left: 20px;
+}
+
+a {
+    color: #FFDF00;
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow-x: hidden;
+}
+
+/* Menu */
+
+#container>div {
+    width: 15%;
+}
+
+.nav-link {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+#navbar {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+}
+
+/* End Menu */
+
+code {
+    display: block;
+    padding-bottom: 20px;
+    background-color: #A2A2A2;
+    color: #000;
+    font-size: 0.75rem;
+}
+
+#main-doc {
+    width: 75%;
+    margin-top: 15px;
+    border-left: 2px solid #FFDF00;
+    padding-left: 30px;
+}
+
+@media only screen and (max-width: 1024px) {
+    pre {
+        white-space: pre-wrap;
+    }
+
+    #container>div {
+        display: none;
+    }
+
+    #main-doc {
+        width: 100%;
+    }
+}
